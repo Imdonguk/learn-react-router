@@ -2,18 +2,17 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Menu = () => {
-    const woogieboogie = {
+    const activeStyle = {
         color: 'green',
         fontSize: '2rem'
     };
-
-
     return (
         <div>
             <ul>
-                <li><NavLink exact to="/" activeStyle={woogieboogie}>Home</NavLink></li>
-                <li><NavLink exact to="/about" activeStyle={woogieboogie}>About</NavLink></li>
-                <li><NavLink to="/about/우기부기" activeStyle={woogieboogie}>About 우기부기</NavLink></li>
+                <li><NavLink exact to="/" activeStyle={activeStyle}>Home</NavLink></li>
+                <li><NavLink exact to="/about" activeStyle={activeStyle}>About</NavLink></li>
+                <li><NavLink to="/about/우기부기" activeStyle={activeStyle}>About 우기부기</NavLink></li>
+                <li><NavLink to="/posts" activeStyle={activeStyle}>Posts</NavLink></li>
             </ul>
             <hr />
         </div>
