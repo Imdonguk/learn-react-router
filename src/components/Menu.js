@@ -1,13 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Menu = () => {
+    const woogieboogie = {
+        color: 'green',
+        fontSize: '2rem'
+    };
+
+
     return (
         <div>
             <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/about/우기부기">About 우기부기</Link></li>
+                <li><NavLink exact to="/" activeStyle={woogieboogie}>Home</NavLink></li>
+                <li><NavLink exact to="/about" activeStyle={woogieboogie}>About</NavLink></li>
+                <li><NavLink to="/about/우기부기" activeStyle={woogieboogie}>About 우기부기</NavLink></li>
             </ul>
             <hr />
         </div>
