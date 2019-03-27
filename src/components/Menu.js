@@ -1,20 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './Menu.scss';
 
 const Menu = () => {
-    const activeStyle = {
-        color: 'green',
-        fontSize: '2rem'
-    };
+
     return (
-        <div>
-            <ul>
-                <li><NavLink exact to="/" activeStyle={activeStyle}>Home</NavLink></li>
-                <li><NavLink exact to="/about" activeStyle={activeStyle}>About</NavLink></li>
-                <li><NavLink to="/about/우기부기" activeStyle={activeStyle}>About 우기부기</NavLink></li>
-                <li><NavLink to="/posts" activeStyle={activeStyle}>Posts</NavLink></li>
-            </ul>
-            <hr />
+        <div className="menu">
+            <NavLink exact className="item" activeClassName="active" to='/'>HOME</NavLink>
+            <NavLink className="item" activeClassName="active" to="/about">About</NavLink>
+            <NavLink className="item" activeClassName="active" to="/posts">포스트</NavLink>
         </div>
     );
 };
